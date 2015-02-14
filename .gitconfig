@@ -1,0 +1,7 @@
+[push]
+	default = matching
+[color]
+	ui = auto
+[user]
+	name = Tyler Moore
+	email = me@commodoretyler.com
