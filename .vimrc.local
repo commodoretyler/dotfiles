@@ -12,7 +12,7 @@ if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
     colorscheme solarized
   else
-    colorscheme desert
+    colorscnskheme desert
   endif
 endif
 
@@ -36,8 +36,30 @@ silent! autocmd VimEnter * RemoveConflictingAlignMaps
 let g:syntastic_javascript_checkers=['eslint']
 let g:JSHintHighlightErrorLine=1
 
+" syntax on
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_html_eslint_exec = '$(npm bin)/eslint'
+
 " Display hidden files in nerd tree
 let NERDTreeShowHidden=1
 
-Plugin 'scrooloose/nerdcommenter'
+filetype plugin on
+
+" NeoBundleLazy 'flowtype/vim-flow', {
+            " \ 'autoload': {
+            " \     'filetypes': 'javascript'
+            " \ }}
+
+" Typescript settings
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = '-w'
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 

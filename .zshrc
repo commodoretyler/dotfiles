@@ -1,5 +1,4 @@
 alias vim="mvim -v"
-alias php71='php'
 
 # Git Aliases
 alias gs='git status'
@@ -17,8 +16,6 @@ alias gr='git rebase'
 alias ni="npm install"
 
 alias ca='cd ~/Sites/CA'
-alias expo='cd ~/Sites/Expo'
-alias expos='cd ~/Sites/Expo && npm run dev'
 alias cdocs='cd ~/Sites/ca-ui-kit-docs'
 alias cdocrun='cd ~/Sites/ca-ui-kit-docs && npm run dev'
 
@@ -49,16 +46,10 @@ alias mysqlerrlog='tail -f /usr/local/var/mysql/Tylers-MBP-2.log'
 alias phpini='vim /usr/local/etc/php/7.1/php.ini'
 alias zerefresh='bash ~/Sites/CA/zend-expressive/bin/ze-refresh.sh -c cpac.local'
 
-# Homebrew PHP CLI
-export PATH="$(brew --prefix php@7.1)/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
-
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 
 export GOPATH=$HOME/Sites/go
 
@@ -69,6 +60,9 @@ export GOPATH=$HOME/Sites/go
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/tylermoore/.sdkman"
