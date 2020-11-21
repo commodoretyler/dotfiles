@@ -19,26 +19,6 @@ alias ca='cd ~/Sites/CA'
 alias cdocs='cd ~/Sites/ca-ui-kit-docs'
 alias cdocrun='cd ~/Sites/ca-ui-kit-docs && npm run dev'
 
-#alias awsqagit='ssh -i ~/.ssh/CA_Developer.pem tmoore@10.0.4.25'
-alias awsqaweb1='ssh -i ~/.ssh/ca_admin.pem ec2-user@10.0.4.90'
-alias awsqaweb2='ssh -i ~/.ssh/ca_admin.pem ec2-user@10.0.4.9'
-
-alias awsjenkins='ssh -i ~/.ssh/ca-virginia-ci-jenkins.pem ec2-user@10.0.4.171'
-
-
-# alias awsohiogit='ssh -i ~/.ssh/ca-ohio-key-pair.pem tmoore@10.0.4.190'
-# alias awsohioweb1='ssh -i ~/.ssh/ca-ohio-key-pair.pem ec2-user@10.0.4.33'
-# alias awsohioweb2='ssh -i ~/.ssh/ca-ohio-key-pair.pem ec2-user@10.0.4.127'
-# alias awsohioweb3='ssh -i ~/.ssh/ca-ohio-key-pair.pem ec2-user@10.0.4.149'
-# alias awsohioweb4='ssh -i ~/.ssh/ca-ohio-key-pair.pem ec2-user@10.0.4.6'
-
-alias awsqagit='ssh 10.132.120.181 -l tmoore@caprod.loc'
-alias awsqanodeweb='ssh 10.132.120.85 -l tmoore@caprod.loc'
-alias awsohiogit='ssh tmoore@caprod.loc@10.132.40.55'
-alias awsprodnodeweb='ssh tmoore@caprod.loc@10.132.40.33'
-alias sshjenkins='ssh 10.132.120.26 -l tmoore@caprod.loc'
-alias awsqamysql='mysql -u tmoore -h ae1-t-aurora-cluster-01.cluster-clf0gzmumgyv.us-east-1.rds.amazonaws.com -p'
-
 alias symcaui='rm -r ./node_modules/ca-ui-kit && ln -s ~/Sites/ca-ui-kit ./node_modules/ca-ui-kit'
 
 alias phperrlog='tail -f /usr/local/var/log/php_error.log'
